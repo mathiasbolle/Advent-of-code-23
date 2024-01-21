@@ -4,7 +4,6 @@ import java.io.File
 
 fun main() {
     val encodedCalibrations = File("src/main/resources/1.txt").readLines()
-
     val solution = sumOfCalibrationValues(encodedCalibrations)
 
     println("The sum of the all the calibration values are:")
@@ -15,7 +14,6 @@ fun sumOfCalibrationValues(encodedCalibration: List<String>): Int {
     var calibrationsSum = 0
 
     for (encodedCalibrationLine in encodedCalibration) {
-
         var calibrationNumber = ""
         val codeToChar = encodedCalibrationLine.toCharArray()
 
@@ -32,7 +30,6 @@ fun sumOfCalibrationValues(encodedCalibration: List<String>): Int {
                 break
             }
         }
-
         calibrationsSum += (calibrationNumber.toInt())
     }
     return calibrationsSum
